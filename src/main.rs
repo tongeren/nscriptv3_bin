@@ -36,6 +36,7 @@ impl NscriptStructBinding for MyCustomStruct {
 /// these also get copied when spawning threads!!
 pub fn nscriptfn_helloworld(args:&Vec<&str>,block :&mut NscriptCodeBlock , storage :&mut NscriptStorage) -> NscriptVar  {
     let mut var = NscriptVar::new("helloworld");
+    print(&var.stringdata, "green");
     // set the returning stringdata
     var.stringdata = "helloworld!".to_string();
     // set something to the stringvec
